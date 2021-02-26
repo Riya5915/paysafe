@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Checkout</title>
+    <style>body { text-align: center; }</style>
     <script src="https://hosted.paysafe.com/checkout/v2/paysafe.checkout.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 </head>
@@ -9,6 +10,10 @@
 
     <h1>Welcome to Checkouts page</h1>
     {% csrf_token %}
+    <label for="description">Enter the message you want to give:</label><br/>
+    <textarea id="description" name="description" rows="4" cols="50">
+      My Payments Description
+    </textarea>
     <br/>
     <button onclick="checkout()">Pay Now</button>
 
